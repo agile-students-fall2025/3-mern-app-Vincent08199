@@ -78,5 +78,19 @@ app.post('/messages/save', async (req, res) => {
   }
 })
 
+// About Us
+app.get('/about', (req, res) => {
+  res.json({
+    name: 'Xiancheng (Vincent) Su',
+    title: 'CS @ NYU, Real Estate Development minor',
+    bio: [
+      'I like to integrate technology into everyday life and hope to make people’s lives more convenient.',
+      'I am especially interested in the applications of technology in the real estate industry, particularly the use of blockchain today.'
+    ],
+    photoUrl: 'http://localhost:7002/vincent.jpg'
+  });
+});
+
+
 // export the express app we created to make it available to other modules
 module.exports = app // CommonJS export style!
